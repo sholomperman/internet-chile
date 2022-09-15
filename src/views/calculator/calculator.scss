@@ -1,0 +1,50 @@
+#Calculator {
+  height: calc(100vh - 8vh);
+  min-height: -webkit-fill-aveilable;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  h1 {
+    font-size: 48px;
+    .amount {
+      font-size: 80px;
+      color: #8cc63e;
+    }
+    .mbps {
+      color: #8cc63e;
+    }
+  }
+  .Calculator-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -35px; // all cards have 35px on left side there fore unsenturing all the card
+  }
+}
+
+.message {
+  display: none;
+  background-color: red;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #Calculator {
+    .message {
+      display: block;
+    }
+    h1 {
+      font-size: 12px;
+      .amount {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+

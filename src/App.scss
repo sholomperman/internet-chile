@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none; // IE and Edge
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+  --main: #8cc63e;
+  --secondary: #800080;
+  --white: #ffffff;
+  --lightGrey: #f3f3f3;
+  --disabled: #808080de;
+  --black: #000000;
+}
+
+.App {
+  .sections {
+    > * {
+      height: calc(100vh - 8vh);
+      scroll-snap-align: end;
+    }
+  }
+}
