@@ -1,35 +1,38 @@
 import React, {useState} from "react";
 import "./navBar.scss";
+import close from "../../assets/close_FILL0.svg";
+import menu from "../../assets/menu_FILL0.svg";
 import img from "../../assets/internet.svg";
+import { Link } from 'react-router-dom'
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const NavBar = () => {
   const [hambergerOpen, setHambergerOpen] = useState(false)
-
-
-
+  const { width } = useWindowDimensions()
+  const closeMane = () => {
+    setHambergerOpen(false)
+  }
   return (
     <div className="NavBar">
       <div onClick={() => setHambergerOpen(!hambergerOpen)} className="hamberger">
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src={hambergerOpen ? close : menu} alt="" />
       </div>
-      <a className="img" href="#Home">
+      <Link to='/' className="img">
         <img src={img} alt="compeny logo" />
-      </a>
+      </Link>
       <ul style={{left: hambergerOpen ? 0 : "-300px"}}>
-        <a href="#Home">
+        <Link onClick={()=>closeMane()} to='/'>
           <li>Home</li>
-        </a>
-        <a href="#Packeges">
+        </Link>
+        <Link onClick={()=>closeMane()} to='Packeges' >
           <li>Packeges</li>
-        </a>
-        <a href="#Calculator">
+        </Link>
+        <Link style={{display: width < 800 ? 'none' : 'block'}} onClick={()=>closeMane()} to="Calculator" >
           <li>Calculatir</li>
-        </a>
-        <a href="#Contact">
+        </Link>
+        <Link onClick={()=>closeMane()} to='Contact' >
           <li>Contact</li>
-        </a>
+        </Link>
       </ul>
     </div>
   );
