@@ -1,5 +1,5 @@
 .Footer {
-  height: 100vh;
+  height: calc(100vh - 8vh);
   position: relative;
   display: flex;
   .wave {

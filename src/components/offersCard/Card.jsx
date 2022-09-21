@@ -26,7 +26,6 @@ const Card = ({ arr }) => {
   } else {
     newArr = arr
   }
-  console.log(newArr)
   return (
     <>
       {newArr?.map((i) => (

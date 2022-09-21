@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Routes, Route} from 'react-router-dom'
 import axios from "axios";
 import "./App.scss";
 import Nav from "./components/navBar/NavBar";
@@ -33,16 +34,15 @@ const App = () => {
     calenderApi("/offers", setOffers);
   }, []);
 
-  console.log(calc, home, offers);
   return (
     <div className="App">
       <Nav />
-      <div className="sections">
-        {home === undefined ? <Loading /> : <Home data={home} />}
-        {home === undefined ? <Loading /> : <Offers data={offers} />}
-        {home === undefined ? <Loading /> : <Calculator data={calc} />}
-        {home === undefined ? <Loading /> : <Contact />}
-      </div>
+      <Routes>
+        <Route path='Packeges' element={<Offers data={offers} />} />
+        <Route path='Calculator' element={<Calculator data={calc} />} />
+        <Route path='Contact' element={<Contact />} />
+        <Route path='/' element={home === undefined ? <Loading /> : <Home data={home} />} />
+      </Routes>
     </div>
   );
 };

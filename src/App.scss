@@ -23,15 +23,6 @@
   --disabled: #808080de;
   --black: #000000;
 }
-
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .sections {
-    > * {
-      height: calc(100vh - 8vh);
-      scroll-snap-align: end;
-    }
-  }
+  height: 100vh;
 }
