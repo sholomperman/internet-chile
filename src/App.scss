@@ -25,13 +25,13 @@
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   .sections {
     > * {
       height: calc(100vh - 8vh);
       scroll-snap-align: end;
-      @media screen and (max-width: 800px) {
-        height: calc(100vh - 16vh);
-      }
     }
   }
 }
