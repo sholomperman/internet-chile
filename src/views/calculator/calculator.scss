@@ -1,5 +1,5 @@
 #Calculator {
-  height: 100vh;
+  height: calc(100vh - 8vh);
   margin: 0 auto;
   width: 70%;
   display: flex;
@@ -26,24 +26,9 @@
   }
 }
 
-.message {
-  display: none;
-  background-color: red;
-  padding: 10px;
-}
-
 @media screen and (max-width: 800px) {
   #Calculator {
-    .message {
-      display: block;
-    }
-    h1 {
-      font-size: 12px;
-      .amount {
-        font-size: 18px;
-      }
-    }
+    display: none;
   }
 }
-
 

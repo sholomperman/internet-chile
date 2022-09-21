@@ -9,7 +9,6 @@ const Calculator = ({ data }) => {
 
   return (
     <div id="Calculator">
-      <h1 className="message">this page avelible on phone size yet</h1>
       {/* max of 8 components */}
       <h1>
         You need around{" "}
